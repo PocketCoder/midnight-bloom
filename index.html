@@ -1,220 +1,274 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Midnight Bloom</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <style>
-            .urbanist {
-                font-family: "Urbanist", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 500;
-                font-style: normal;
-            }
-        </style>
-    </head>
-    <body>
-        <header class="w-full h-screen bg-[url('assets/hands.png')] bg-center bg-cover urbanist text-[#DFE4D0]">
-            <nav class="w-full p-4 flex justify-between items-center bg-black/30 backdrop-filter backdrop-blur-lg fixed z-50">
-                <h2 class="text-2xl">Midnight Bloom</h2>
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                <!-- Desktop navigation -->
-                <ul class="hidden md:flex justify-end gap-4 items-center transition-colors ease-in-out">
-                    <li class="hover:underline"><a href="#synopsis">Synopsis</a></li>
-                    <span>|</span>
-                    <li class="hover:underline"><a href="#team">The Team</a></li>
-                    <span>|</span>
-                    <li class="hover:underline"><a href="#writer">Writer's Statement</a></li>
-                    <span>|</span>
-                    <li class="hover:underline"><a href="#director">Director's Statement</a></li>
-                    <span>|</span>
-                    <li class="hover:underline"><a href="#instagram">Instagram</a></li>
-                    <span>|</span>
-                    <li class="hover:underline"><a href="#contact">Get in touch</a></li>
-                </ul>
-            </nav>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[#272E2E] text-[#DFE4D0] z-40 flex flex-col items-center justify-center space-y-8">
-                <button id="close-mobile-menu" class="absolute top-4 right-4 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <ul class="flex flex-col items-center space-y-8 text-2xl">
-                    <li><a href="#synopsis" class="mobile-menu-link">Synopsis</a></li>
-                    <li><a href="#team" class="mobile-menu-link">The Team</a></li>
-                    <li><a href="#writer" class="mobile-menu-link">Writer's Statement</a></li>
-                    <li><a href="#director" class="mobile-menu-link">Director's Statement</a></li>
-                    <li><a href="https://www.instagram.com/midnight_bloom_film/" class="mobile-menu-link" target="_blank">Instagram</a></li>
-                    <li><a href="#contact" class="mobile-menu-link">Get in touch</a></li>
-                </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Bloom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .urbanist {
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="w-full h-screen bg-[url('assets/hands.png')] bg-center bg-cover urbanist text-[#DFE4D0]">
+        <nav
+            class="w-full p-4 flex justify-between items-center bg-black/30 backdrop-filter backdrop-blur-lg fixed z-50">
+            <h2 class="text-2xl">Midnight Bloom</h2>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <!-- Desktop navigation -->
+            <ul class="hidden md:flex justify-end gap-4 items-center transition-colors ease-in-out">
+                <li class="hover:underline"><a href="#synopsis">Synopsis</a></li>
+                <span>|</span>
+                <li class="hover:underline"><a href="#team">The Team</a></li>
+                <span>|</span>
+                <li class="hover:underline"><a href="#writer">Writer's Statement</a></li>
+                <span>|</span>
+                <li class="hover:underline"><a href="#director">Director's Statement</a></li>
+                <span>|</span>
+                <li class="hover:underline"><a href="#instagram">Instagram</a></li>
+                <span>|</span>
+                <li class="hover:underline"><a href="#contact">Get in touch</a></li>
+            </ul>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed inset-0 bg-[#272E2E] text-[#DFE4D0] z-40 flex flex-col items-center justify-center space-y-8">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <ul class="flex flex-col items-center space-y-8 text-2xl">
+                <li><a href="#synopsis" class="mobile-menu-link">Synopsis</a></li>
+                <li><a href="#team" class="mobile-menu-link">The Team</a></li>
+                <li><a href="#writer" class="mobile-menu-link">Writer's Statement</a></li>
+                <li><a href="#director" class="mobile-menu-link">Director's Statement</a></li>
+                <li><a href="https://www.instagram.com/midnight_bloom_film/" class="mobile-menu-link"
+                        target="_blank">Instagram</a></li>
+                <li><a href="#contact" class="mobile-menu-link">Get in touch</a></li>
+            </ul>
+        </div>
+        <div class="h-full w-full flex flex-col justify-center items-start p-8 text-center md:text-left">
+            <h1 class="text-[10vh] md:text-[15vh] leading-none">
+                Midnight
+                <br />
+                Bloom
+            </h1>
+            <p
+                class="w-full md:w-5/12 text-base md:text-xl self-center md:self-end justify-center md:justify-end text-center md:text-right mt-4 md:mt-0">
+                Two young, working-class fathers – whose friendship is now a powerful, fragile romance – take refuge in
+                an empty car park night after night, but once their secret is out, how do they put their lives back
+                together… together?</p>
+        </div>
+    </header>
+    <main class="w-screen h-auto">
+        <section id="synopsis"
+            class="text-[#DFE4D0] w-full min-h-screen bg-[url('assets/characters-car-park.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col">
+            <h2 class="text-4xl urbanist md:text-left mb-4">Synopsis</h2>
+            <div
+                class="w-full max-w-3xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg mt-auto mb-auto">
+                <p class="text-base md:text-lg text-center md:text-left">Midnight Bloom is a poignant and gritty drama
+                    exploring the complexities of love, friendship, and societal expectations. It delves into the lives
+                    of two working-class fathers whose bond evolves into a fragile romance, forcing them to confront
+                    their secret amidst the harsh realities of their world. The film navigates themes of identity,
+                    masculinity, and the enduring power of human connection against a backdrop of urban struggle.</p>
             </div>
-            <div class="h-full w-full flex flex-col justify-center items-start p-8 text-center md:text-left">
-                <h1 class="text-[10vh] md:text-[15vh] leading-none">
-                    Midnight
+        </section>
+        <section id="team"
+            class="text-[#272E2E] w-full bg-[url('assets/estate.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col items-start">
+            <h2 class="text-4xl urbanist md:text-left mb-8">Meet the Team</h2>
+            <div class="flex flex-wrap justify-center gap-8 text-[#DFE4D0] w-full">
+                <div
+                    class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
+                    <img src="assets/jake.jpg" class="h-32 w-32 object-cover rounded-full">
+                    <div>
+                        <h3 class="text-xl urbanist pb-1 text-center">Jake Williams</h3>
+                        <span class="pb-4"><a href="https://110399.xyz" target="_blank"
+                                class="underline">110399.xyz/</a></span>
+                        <p class="text-center">Writer</p>
+                    </div>
+                </div>
+                <div
+                    class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
+                    <img src="assets/adam.jpg" class="h-32 w-32 object-cover rounded-full">
+                    <div>
+                        <h3 class="text-xl urbanist pb-1 text-center">Adam Fergler</h3>
+                        <span class="pb-4"><a href="https://adamfergler.co.uk" target="_blank"
+                                class="underline">adamfergler.co.uk</a></span>
+                        <p class="text-center">Director</p>
+                    </div>
+                </div>
+                <div
+                    class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
+                    <img src="https://via.placeholder.com/400x400.png?text=Natasha+Coleman"
+                        class="h-32 w-32 object-cover rounded-full">
+                    <div>
+                        <h3 class="text-xl urbanist pb-1 text-center">Natasha Coleman</h3>
+                        <span class="pb-4"><a href="https://www.instagram.com/lazysusanfilms" target="_blank"
+                                class="underline">@lazysusanfilms</a></span>
+                        <p class="text-center">Art Department</p>
+                    </div>
+                </div>
+                <div
+                    class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
+                    <img src="https://via.placeholder.com/400x400.png?text=Joshua+Ighodaro"
+                        class="h-32 w-32 object-cover rounded-full">
+                    <div>
+                        <h3 class="text-xl urbanist pb-1 text-center">Joshua Ighodaro</h3>
+                        <span class="pb-4"><a href="https://www.instagram.com/j_ighodaro" target="_blank"
+                                class="underline">@j_ighodaro</a></span>
+                        <p class="text-center">DOP</p>
+                    </div>
+                </div>
+                <div
+                    class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
+                    <img src="https://via.placeholder.com/400x400.png?text=Matthew+Brewer"
+                        class="h-32 w-32 object-cover rounded-full">
+                    <div>
+                        <h3 class="text-xl urbanist pb-1 text-center">Matthew Brewer</h3>
+                        <span class="pb-4"><a href="https://www.instagram.com/jampicturesfilms" target="_blank"
+                                class="underline">@jampicturesfilms</a></span>
+                        <p class="text-center">Producer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="writer"
+            class="w-full min-h-screen text-[#DFE4D0] bg-[url('assets/car-park.jpg')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col">
+            <h2 class="text-4xl urbanist md:text-left mb-4">Writer's Statement</h2>
+            <div
+                class="w-full max-w-5xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg mt-auto mb-auto">
+                <p>I began writing Midnight Bloom as a distraction. It scratched an itch that kept
+                    me going through lockdown, unemployment, and a post-uni crisis, where I was
+                    deciding which direction I wanted my life to go.</p>
+                <br />
+                <p>The initial idea stuck with me because it was a story I hadn’t seen told. I grew up
+                    surrounded by a masculinity that was, very present but nevertheless always out
+                    of reach for me. I wanted to explore this theme, having characters live their lives
+                    partly through the lens of my own experience. I wanted characters that most
+                    audiences would stereotype – people that might be written oﬀ and given little
+                    careful thought. Then I could expose their feelings and their sides unseen. How
+                    would love prevail over restrictive hyper-masculinity, societal expectations, and
+                    a whole host of other odds?</p>
+                <div id="writer-full-text" class="max-h-0 overflow-hidden transition-all duration-2000 ease-in-out">
                     <br />
-                    Bloom
-                </h1>
-                <p class="w-full md:w-5/12 text-base md:text-xl self-center md:self-end justify-center md:justify-end text-center md:text-right mt-4 md:mt-0">Two young, working-class fathers – whose friendship is now a powerful, fragile romance – take refuge in an empty car park night after night, but once their secret is out, how do they put their lives back together… together?</p>
+                    <p>Through the writing process I explored my own identity and my experiences
+                        growing up. My perspective undoubtedly shaped the script and the characters. I
+                        wanted to see if love would endure its exposure to criticism and ridicule in Aaron
+                        and Jamie’s world. I wanted to test the connection a father has with his
+                        daughter, and demonstrate that there’s room for it alongside other personal
+                        bonds. I hoped, and still do, that seeing male tenderness, male love, and male
+                        friendship on screen invites conversation, connection, and, dare I say, change.</p>
+                    <br />
+                    <p>I currently work at a youth club and see all diﬀerent manifestations of young life,
+                        with its struggles, hopes and opportunities. I have the privilege of sharing lives
+                        with young people as they grow. I’ve seen softer, more tender sides being lost
+                        and gradually regained on complex journeys of discovery. Midnight Bloom exists
+                        to show how two halves of ourselves can exist as one. Media representations of
+                        these things have moved a long way since I was in school, even since I started
+                        university, but I want to push it further. I want to be a part of the conversation. I
+                        want to add to the collection of great films that explore life growing up in a poor
+                        city, being trapped by circumstance, and having the resolve to power through
+                        regardless. The script, for me, is about finding everything good about life,
+                        whatever our circumstances, and pushing that to the forefront of our vision.</p>
+                </div>
+                <button id="read-more-button"
+                    class="mt-4 px-4 py-2 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg border border-white border-opacity-30 text-white font-bold rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-300 ease-in-out">Read
+                    more</button>
             </div>
-        </header>
-        <main class="w-screen h-auto">
-            <section id="synopsis" class="text-[#DFE4D0] w-full min-h-screen bg-[url('assets/characters-car-park.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col">
-                <h2 class="text-4xl urbanist md:text-left mb-4">Synopsis</h2>
-                <div class="w-full max-w-3xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg mt-auto mb-auto">
-                    <p class="text-base md:text-lg text-center md:text-left">Midnight Bloom is a poignant and gritty drama exploring the complexities of love, friendship, and societal expectations. It delves into the lives of two working-class fathers whose bond evolves into a fragile romance, forcing them to confront their secret amidst the harsh realities of their world. The film navigates themes of identity, masculinity, and the enduring power of human connection against a backdrop of urban struggle.</p>
-                </div>
-            </section>
-            <section id="team" class="text-[#272E2E] w-full bg-[url('assets/estate.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col items-start">
-                <h2 class="text-4xl urbanist md:text-left mb-8">Meet the Team</h2>
-                <div class="flex flex-wrap justify-center gap-8 text-[#DFE4D0] w-full">
-                    <div class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
-                        <img src="assets/jake.jpg" class="h-32 w-32 object-cover rounded-full">
-                        <div>
-                            <h3 class="text-xl urbanist pb-1 text-center">Jake Williams</h3>
-                            <span class="pb-4"><a href="https://110399.xyz" target="_blank" class="underline">110399.xyz/</a></span>
-                            <p class="text-center">Writer</p>
-                        </div>
-                    </div>
-                    <div class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
-                        <img src="assets/adam.jpg" class="h-32 w-32 object-cover rounded-full">
-                        <div>
-                            <h3 class="text-xl urbanist pb-1 text-center">Adam Fergler</h3>
-                            <span class="pb-4"><a href="https://adamfergler.co.uk" target="_blank" class="underline">adamfergler.co.uk</a></span>
-                            <p class="text-center">Director</p>
-                        </div>
-                    </div>
-                    <div class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
-                        <img src="https://via.placeholder.com/400x400.png?text=Natasha+Coleman" class="h-32 w-32 object-cover rounded-full">
-                        <div>
-                            <h3 class="text-xl urbanist pb-1 text-center">Natasha Coleman</h3>
-                            <span class="pb-4"><a href="https://www.instagram.com/lazysusanfilms" target="_blank" class="underline">@lazysusanfilms</a></span>
-                            <p class="text-center">Art Department</p>
-                        </div>
-                    </div>
-                    <div class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
-                        <img src="https://via.placeholder.com/400x400.png?text=Joshua+Ighodaro" class="h-32 w-32 object-cover rounded-full">
-                        <div>
-                            <h3 class="text-xl urbanist pb-1 text-center">Joshua Ighodaro</h3>
-                            <span class="pb-4"><a href="https://www.instagram.com/j_ighodaro" target="_blank" class="underline">@j_ighodaro</a></span>
-                            <p class="text-center">DOP</p>
-                        </div>
-                    </div>
-                    <div class="w-11/12 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center gap-4 bg-[#272E2E] px-4 py-8 rounded-sm">
-                        <img src="https://via.placeholder.com/400x400.png?text=Matthew+Brewer" class="h-32 w-32 object-cover rounded-full">
-                        <div>
-                            <h3 class="text-xl urbanist pb-1 text-center">Matthew Brewer</h3>
-                            <span class="pb-4"><a href="https://www.instagram.com/jampicturesfilms" target="_blank" class="underline">@jampicturesfilms</a></span>
-                            <p class="text-center">Producer</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="writer" class="w-full min-h-screen text-[#DFE4D0] bg-[url('assets/car-park.jpg')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col">
-                <h2 class="text-4xl urbanist md:text-left mb-4">Writer's Statement</h2>
-                <div class="w-full max-w-5xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg mt-auto mb-auto">
-                    <p>I began writing Midnight Bloom as a distraction. It scratched an itch that kept
-                        me going through lockdown, unemployment, and a post-uni crisis, where I was
-                        deciding which direction I wanted my life to go.</p>
-                        <br />
-                    <p>The initial idea stuck with me because it was a story I hadn’t seen told. I grew up
-                        surrounded by a masculinity that was, very present but nevertheless always out
-                        of reach for me. I wanted to explore this theme, having characters live their lives
-                        partly through the lens of my own experience. I wanted characters that most
-                        audiences would stereotype – people that might be written oﬀ and given little
-                        careful thought. Then I could expose their feelings and their sides unseen. How
-                        would love prevail over restrictive hyper-masculinity, societal expectations, and
-                        a whole host of other odds?</p>
-                    <div id="writer-full-text" class="max-h-0 overflow-hidden transition-all duration-2000 ease-in-out">
-                        <br />
-                        <p>Through the writing process I explored my own identity and my experiences
-                            growing up. My perspective undoubtedly shaped the script and the characters. I
-                            wanted to see if love would endure its exposure to criticism and ridicule in Aaron
-                            and Jamie’s world. I wanted to test the connection a father has with his
-                            daughter, and demonstrate that there’s room for it alongside other personal
-                            bonds. I hoped, and still do, that seeing male tenderness, male love, and male
-                            friendship on screen invites conversation, connection, and, dare I say, change.</p>
-                            <br />
-                        <p>I currently work at a youth club and see all diﬀerent manifestations of young life,
-                            with its struggles, hopes and opportunities. I have the privilege of sharing lives
-                            with young people as they grow. I’ve seen softer, more tender sides being lost
-                            and gradually regained on complex journeys of discovery. Midnight Bloom exists
-                            to show how two halves of ourselves can exist as one. Media representations of
-                            these things have moved a long way since I was in school, even since I started
-                            university, but I want to push it further. I want to be a part of the conversation. I
-                            want to add to the collection of great films that explore life growing up in a poor
-                            city, being trapped by circumstance, and having the resolve to power through
-                            regardless. The script, for me, is about finding everything good about life,
-                            whatever our circumstances, and pushing that to the forefront of our vision.</p>
-                    </div>
-                    <button id="read-more-button" class="mt-4 px-4 py-2 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg border border-white border-opacity-30 text-white font-bold rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-300 ease-in-out">Read more</button>
-                </div>
-            </section>
-            <section id="director" class="w-full min-h-screen bg-[url('assets/girl.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col text-[#DFE4D0]">
-                <h2 class="text-4xl urbanist md:text-left mb-4">Director's Statement</h2>
-                <div class="w-full max-w-3xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg mt-auto mb-auto">
-                    <p class="text-base md:text-lg text-center md:text-left">As the director, my vision for Midnight Bloom is to create a visually stunning and emotionally resonant film that captures the raw intimacy and vulnerability of its characters. I aim to use evocative cinematography and a nuanced approach to storytelling to immerse the audience in their world, highlighting the beauty and struggle of their journey. The film will explore themes of love, identity, and resilience, offering a powerful and authentic portrayal of human connection.</p>
-                </div>
-            </section>
-            
+        </section>
+        <section id="director"
+            class="w-full min-h-screen bg-[url('assets/girl.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col text-[#DFE4D0]">
+            <h2 class="text-4xl urbanist md:text-left mb-4">Director's Statement</h2>
+            <div
+                class="w-full max-w-3xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg mt-auto mb-auto">
+                <p class="text-base md:text-lg text-center md:text-left">As the director, my vision for Midnight Bloom
+                    is to create a visually stunning and emotionally resonant film that captures the raw intimacy and
+                    vulnerability of its characters. I aim to use evocative cinematography and a nuanced approach to
+                    storytelling to immerse the audience in their world, highlighting the beauty and struggle of their
+                    journey. The film will explore themes of love, identity, and resilience, offering a powerful and
+                    authentic portrayal of human connection.</p>
+            </div>
+        </section>
 
-            <section id="contact" class="w-full min-h-screen text-[#DFE4D0] bg-[url('assets/characters-estate.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col">
-                <h2 class="text-4xl urbanist md:text-left mb-4">Get in Touch</h2>
-                <form action="#" method="POST" class="w-full max-w-lg mx-auto mt-8 p-4 bg-black bg-opacity-70 rounded-lg mt-auto mb-auto">
-                    <div class="mb-4">
-                        <label for="name" class="block mb-2">Name</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-purple-500">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block mb-2">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-purple-500">
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="block mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-purple-500"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg border border-white border-opacity-30 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-300 ease-in-out">Send Message</button>
-                    </div>
-                </form>
-            </section>
-        </main>
+
+        <section id="contact"
+            class="w-full min-h-screen text-[#DFE4D0] bg-[url('assets/characters-estate.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col">
+            <h2 class="text-4xl urbanist md:text-left mb-4">Get in Touch</h2>
+            <form action="https://formspree.io/f/xovldpaz" method="POST"
+                class="w-full max-w-lg mx-auto mt-8 p-4 bg-black bg-opacity-70 rounded-lg mt-auto mb-auto">
+                <input type="hidden" name="_next" value="https://midnightbloom.film/success.html">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-purple-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-purple-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-purple-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg border border-white border-opacity-30 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-300 ease-in-out">Send
+                        Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
     <script>
-            document.getElementById('mobile-menu-button').addEventListener('click', function() {
-                document.getElementById('mobile-menu').classList.remove('hidden');
-            });
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.remove('hidden');
+        });
 
-            document.getElementById('close-mobile-menu').addEventListener('click', function() {
+        document.getElementById('close-mobile-menu').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+
+        document.querySelectorAll('.mobile-menu-link').forEach(item => {
+            item.addEventListener('click', function () {
                 document.getElementById('mobile-menu').classList.add('hidden');
             });
+        });
 
-            document.querySelectorAll('.mobile-menu-link').forEach(item => {
-                item.addEventListener('click', function() {
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                });
-            });
+        document.getElementById('read-more-button').addEventListener('click', function () {
+            var fullText = document.getElementById('writer-full-text');
+            if (fullText.classList.contains('max-h-0')) {
+                fullText.classList.remove('max-h-0');
+                fullText.classList.add('max-h-[1000px]'); // Use a sufficiently large max-height
+                this.textContent = 'Read less';
+            } else {
+                fullText.classList.remove('max-h-[1000px]');
+                fullText.classList.add('max-h-0');
+                this.textContent = 'Read more';
+            }
+        });
+    </script>
+</body>
 
-            document.getElementById('read-more-button').addEventListener('click', function() {
-                var fullText = document.getElementById('writer-full-text');
-                if (fullText.classList.contains('max-h-0')) {
-                    fullText.classList.remove('max-h-0');
-                    fullText.classList.add('max-h-[1000px]'); // Use a sufficiently large max-height
-                    this.textContent = 'Read less';
-                } else {
-                    fullText.classList.remove('max-h-[1000px]');
-                    fullText.classList.add('max-h-0');
-                    this.textContent = 'Read more';
-                }
-            });
-        </script>
-    </body>
 </html>
