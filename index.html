@@ -121,7 +121,7 @@
             </section>
             <section id="writer" class="w-full min-h-screen text-[#DFE4D0] bg-[url('assets/car-park.jpg')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col justify-center">
                 <h2 class="text-4xl urbanist text-center md:text-left mb-4">Writer's Statement</h2>
-                <div class="w-full max-w-3xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg">
+                <div class="w-full max-w-5xl mx-auto p-8 mt-4 bg-black/70 text-[#DFE4D0] text-base md:text-lg rounded-lg">
                     <p>I began writing Midnight Bloom as a distraction. It scratched an itch that kept
                         me going through lockdown, unemployment, and a post-uni crisis, where I was
                         deciding which direction I wanted my life to go.</p>
@@ -134,26 +134,29 @@
                         careful thought. Then I could expose their feelings and their sides unseen. How
                         would love prevail over restrictive hyper-masculinity, societal expectations, and
                         a whole host of other odds?</p>
+                    <div id="writer-full-text" class="max-h-0 overflow-hidden transition-all duration-2000 ease-in-out">
                         <br />
-                    <p>Through the writing process I explored my own identity and my experiences
-                        growing up. My perspective undoubtedly shaped the script and the characters. I
-                        wanted to see if love would endure its exposure to criticism and ridicule in Aaron
-                        and Jamie’s world. I wanted to test the connection a father has with his
-                        daughter, and demonstrate that there’s room for it alongside other personal
-                        bonds. I hoped, and still do, that seeing male tenderness, male love, and male
-                        friendship on screen invites conversation, connection, and, dare I say, change.</p>
-                        <br />
-                    <p>I currently work at a youth club and see all diﬀerent manifestations of young life,
-                        with its struggles, hopes and opportunities. I have the privilege of sharing lives
-                        with young people as they grow. I’ve seen softer, more tender sides being lost
-                        and gradually regained on complex journeys of discovery. Midnight Bloom exists
-                        to show how two halves of ourselves can exist as one. Media representations of
-                        these things have moved a long way since I was in school, even since I started
-                        university, but I want to push it further. I want to be a part of the conversation. I
-                        want to add to the collection of great films that explore life growing up in a poor
-                        city, being trapped by circumstance, and having the resolve to power through
-                        regardless. The script, for me, is about finding everything good about life,
-                        whatever our circumstances, and pushing that to the forefront of our vision.</p>
+                        <p>Through the writing process I explored my own identity and my experiences
+                            growing up. My perspective undoubtedly shaped the script and the characters. I
+                            wanted to see if love would endure its exposure to criticism and ridicule in Aaron
+                            and Jamie’s world. I wanted to test the connection a father has with his
+                            daughter, and demonstrate that there’s room for it alongside other personal
+                            bonds. I hoped, and still do, that seeing male tenderness, male love, and male
+                            friendship on screen invites conversation, connection, and, dare I say, change.</p>
+                            <br />
+                        <p>I currently work at a youth club and see all diﬀerent manifestations of young life,
+                            with its struggles, hopes and opportunities. I have the privilege of sharing lives
+                            with young people as they grow. I’ve seen softer, more tender sides being lost
+                            and gradually regained on complex journeys of discovery. Midnight Bloom exists
+                            to show how two halves of ourselves can exist as one. Media representations of
+                            these things have moved a long way since I was in school, even since I started
+                            university, but I want to push it further. I want to be a part of the conversation. I
+                            want to add to the collection of great films that explore life growing up in a poor
+                            city, being trapped by circumstance, and having the resolve to power through
+                            regardless. The script, for me, is about finding everything good about life,
+                            whatever our circumstances, and pushing that to the forefront of our vision.</p>
+                    </div>
+                    <button id="read-more-button" class="mt-4 px-4 py-2 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg border border-white border-opacity-30 text-white font-bold rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-300 ease-in-out">Read more</button>
                 </div>
             </section>
             <section id="director" class="w-full min-h-screen bg-[url('assets/girl.png')] bg-center bg-cover pt-[75px] px-6 pb-6 flex flex-col justify-center text-[#DFE4D0]">
@@ -198,6 +201,19 @@
                 item.addEventListener('click', function() {
                     document.getElementById('mobile-menu').classList.add('hidden');
                 });
+            });
+
+            document.getElementById('read-more-button').addEventListener('click', function() {
+                var fullText = document.getElementById('writer-full-text');
+                if (fullText.classList.contains('max-h-0')) {
+                    fullText.classList.remove('max-h-0');
+                    fullText.classList.add('max-h-[1000px]'); // Use a sufficiently large max-height
+                    this.textContent = 'Read less';
+                } else {
+                    fullText.classList.remove('max-h-[1000px]');
+                    fullText.classList.add('max-h-0');
+                    this.textContent = 'Read more';
+                }
             });
         </script>
     </body>
